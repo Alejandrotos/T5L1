@@ -62,3 +62,20 @@ intentos=$(($intentos-1))
 echo "La suma de todos los números es:$acum"
 promedio=$(($acum/$intentos))
 echo "El promedio de las sumas es:$promedio"
+Acti6:
+read -p "Litros de agua consumidos:" litros
+let resul=50
+let precio=20
+if [ $litros -lt 50 ]; then
+echo "El precio es de 20 euros"
+elif [ $litros -lt 200 ]; then
+litros=$(($litros-$resul))
+litros=$(($litros*0,20))
+litros=$(($litros+$precio))
+echo "El precio es de:$litros"
+else 
+litros=$(($litros-$resul-200))
+litros=$(($litros*0,10))
+litros=$((litros+precio+30))
+echo "El precio es de:$litros"
+fi
