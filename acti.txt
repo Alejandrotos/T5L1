@@ -9,3 +9,14 @@ echo "El número mayor es $num2"
 else
 echo "Los dos números son iguales"
 fi
+Acti2:
+#!/bin/bash
+read -p "Introduce un número:" num
+let resul=$(($num%2))
+if [ $num -lt 0 ]; then
+echo "Número introducido invalido."
+elif [ $resul = 0 ]; then
+echo "El número $num es par"
+else
+echo "El número $num es impar"
+fi
