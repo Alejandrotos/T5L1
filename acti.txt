@@ -20,3 +20,18 @@ echo "El número $num es par"
 else
 echo "El número $num es impar"
 fi
+Acti3:
+read -p "Introduce la nota:" nota
+if [ $nota -lt 0 ]; then
+echo "Nota invalida"
+elif [ $nota -lt 5 ]; then
+echo "Suspés"
+elif [ $nota -eq 5 ]; then
+echo "aprovat"
+elif [ $nota -eq 6 ]; then
+echo "bé"
+elif [ $nota -lt 9 ]; then
+echo "notable"
+else 
+echo "excelent"
+fi
