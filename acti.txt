@@ -35,3 +35,30 @@ echo "notable"
 else 
 echo "excelent"
 fi
+Acti4:
+read -p "Introduce un número:" num
+if [ $num -lt 0 ]; then
+echo "Número invalido"
+else
+let x=0
+while [ $x -le $num ]; 
+do
+echo $x
+x=$(($x+1))
+done
+fi
+Acti5:
+read -p "Introduce un número:" num
+let acum=0
+let promedio=0
+let intentos=1
+while [ $num -ne 0 ]
+do 
+acum=$(($acum+$num))
+intentos=$(($intentos+1))
+read -p "Introduce un número:" num
+done
+intentos=$(($intentos-1))
+echo "La suma de todos los números es:$acum"
+promedio=$(($acum/$intentos))
+echo "El promedio de las sumas es:$promedio"
